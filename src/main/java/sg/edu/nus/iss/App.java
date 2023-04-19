@@ -42,5 +42,11 @@ public class App
         bankAcct[0].showAccount();
         bankAcct[0].withdrawal(300);
         bankAcct[0].showAccount();
+
+        FixedDepositAccount fredFixed = new FixedDepositAccount("Fred Mayer", "332-3-332-323", 30000, 10, 6);
+        fredFixed.deposit(2000);
+        fredFixed.withdrawal(2000);
+        float computedBalance = fredFixed.getBalance();
+        System.out.println(fredFixed.getAccountNumber()+"- "+fredFixed.getFullName()+"-->"+computedBalance);
     }
 }
